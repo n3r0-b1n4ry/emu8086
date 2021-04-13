@@ -1,0 +1,49 @@
+<html>
+<head>
+       <title>source code: HelloWorld.asm</title>
+       <meta name="description" content="source code">
+       <style>
+           a:link {text-decoration: none}
+           a:visited {text-decoration: none}
+           a:hover {text-decoration: none; color:#ff0000}
+       </style>
+</head>
+<body leftmargin=110  rightmargin=110 topmargin=20 bgcolor=#FFFFFF text=#000000 link=blue vlink=blue alink=blue>
+ 
+ 
+<!-- * -->
+ 
+ 
+
+
+
+<!-- START AUTOMATIC ASM TO HTML EXPORT -->
+<pre><font size=3 face="Terminal">
+
+<font color=#000064>org</font> 100h 
+ 
+<font color=#0000FF>jmp</font> start       <font color=#008000>; jump over data declaration </font>
+ 
+msg:    <font color=#000064>db</font>      <font color=#800080>"Hello, World!"</font>, 0Dh,0Ah, 24h 
+ 
+start:  <font color=#0000FF>mov</font>     <font color=#C80000>dx</font>, msg  <font color=#008000>; load offset of msg into dx. </font>
+        <font color=#0000FF>mov</font>     <font color=#C80000>ah</font>, 09h  <font color=#008000>; print function is 9. </font>
+        <font color=#0000FF>int</font>     21h      <font color=#008000>; do it! </font>
+         
+        <font color=#0000FF>mov</font>     <font color=#C80000>ah</font>, 0  
+        <font color=#0000FF>int</font>     16h      <font color=#008000>; wait for any key.... </font>
+         
+<font color=#0000FF>ret</font> <font color=#008000>; return to operating system. </font>
+ 
+ 
+</font></pre>
+
+
+
+ 
+ 
+<!-- *** -->
+ 
+ 
+</body>
+</html>

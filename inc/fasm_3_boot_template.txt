@@ -1,0 +1,11 @@
+                                      
+#fasm# 
+
+#make_boot#
+
+org 7c00h
+
+; add your code here
+
+INT 19h 
+

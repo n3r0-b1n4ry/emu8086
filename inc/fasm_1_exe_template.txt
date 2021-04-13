@@ -1,0 +1,20 @@
+
+format MZ   
+
+entry code_seg:start 
+
+stack 256
+    
+      
+segment data_seg
+
+	  
+segment code_seg
+start:
+
+; add your code here
+    
+mov ax, 4c00h
+int 21h    
+
+
